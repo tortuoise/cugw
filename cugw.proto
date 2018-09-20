@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package cugw;
+
+import "google/protobuf/any.proto";
+
+message AnythingForYou {
+    google.protobuf.Any anything = 1;
+}
+
+service Anything {
+
+	rpc Nothing(AnythingForYou) returns (AnythingForYou);
+
+}
